@@ -9,17 +9,17 @@ Exports the `ClientCredentials` class that provides the `getAccessToken` method.
 ## 1. Installation
 
 ```bash
-$ npm install --save client-credentials
+$ npm install --save client-credentials-legacy
 ```
 
 ## 2. Usage
 
 ```javascript
-const ClientCredentials = require('client-credentials');
+var ClientCredentials = require('client-credentials-legacy');
 
-const credentials = new ClientCredentials('my-company.com', 'client-id', 'client-secret');
+var credentials = new ClientCredentials('my-company.com', 'client-id', 'client-secret');
 
-credentials.getAccessToken('https://my-resource.com').then(token => {
+credentials.getAccessToken('https://my-resource.com').then(function(token) {
   console.log('Access Token', token);
 })
 ```
